@@ -1,0 +1,51 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+
+{
+    double num[10];
+    double tot = 0;
+    double ave = 0;
+    double max = 0;
+    double min = 0;
+  
+    
+    
+    for (int i = 0; i < 10; i++)
+    {
+        cout << "Please enter number " << i + 1 << ": " << endl;
+        cin >> num[i];
+        tot += num[i];
+    }
+    
+    ave = tot / 10;
+    
+    
+    min = num[0];
+    max = num[0];
+    
+    for (int i = 1; i < 10; i++)
+    {
+        if (num[i] > max)
+            max = num[i];
+        
+        if (num[i] < max)
+            min = num[i];
+    }
+   
+    cout << "The largest number is: " << max << endl;
+    cout << "The smallest number is: " << min << endl;
+    cout << "The sum of the numbers is: " << tot << endl;
+    cout << "The average of the numbers is: " << ave << endl;
+    
+    return 0;
+}
+
+
+
+
+
+
+
